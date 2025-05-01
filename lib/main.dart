@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'onboarding/Screen1.dart';
+import 'onboarding/splash.dart';
 
 void main() => runApp(const ListenUpApp());
 
@@ -11,8 +11,7 @@ class ListenUpApp extends StatelessWidget {
     return MaterialApp(
       title: 'ListenUp',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'SFPro'),   // optional custom font
-      home: const Screen1(),
+      home: const SplashPage(), // start here
     );
   }
 }

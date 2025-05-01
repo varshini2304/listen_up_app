@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../auth/welcome_sign.dart'; // ⬅️ next stop after onboarding
 import 'onboarding_page.dart';
 
 class Screen2 extends StatelessWidget {
@@ -10,8 +11,10 @@ class Screen2 extends StatelessWidget {
         body:
             'Stuck in traffic? Hitting the gym? Unwinding at home? Let stories move with you. Press play and make every second count!',
         pageIndex: 1,
-        onNext: () {
-          // TODO: navigate to main app
-        },
+        onNext: () => Navigator.pushReplacement(
+          // replace onboard stack
+          context,
+          MaterialPageRoute(builder: (_) => const WelcomeSign()),
+        ),
       );
 }
